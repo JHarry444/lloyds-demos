@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import FetchTrainers from "./FetchTrainers";
 import TrainerForm from "./TrainerForm";
-import Trainer from "./Trainer";
 import styles from './Trainer.module.css';
+import Trainer from "./Trainer";
 
 function TrainerContainer() {
     const [search, setSearch] = useState("");
