@@ -24,7 +24,7 @@ const TrainerForm = function(props: {fetchTrainers: () => void}) {
                 contentType: 'application/json'
             }
         });
-        throw "hello";
+
         if (res.status === 201) props.fetchTrainers();
         else throw Error("Failed to create trainer")
     } catch(error) {
