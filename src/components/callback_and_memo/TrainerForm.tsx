@@ -1,6 +1,7 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, memo, useState } from "react";
+import Trainer from "./Trainer";
 
-const TrainerForm = function(props: {fetchTrainers: () => void}) {
+const TrainerForm = memo(function(props: {fetchTrainers: () => void}) {
 
     const [name, setName] = useState("");
     const [age, setAge] = useState(0);
@@ -10,21 +11,20 @@ const TrainerForm = function(props: {fetchTrainers: () => void}) {
     
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        const data = JSON.stringify({
+        const data: Trainer = {
             name,
             age,
             specialism
-        });
+        };
 
         try {
         const res = await fetch("http://localhost:8081/trainers", {
             method: 'POST',
-            body: data,
+            body: JSON.stringify(data),
             headers: {
                 "Content-Type": 'application/json'
             }
         });
-
         if (res.status === 201) props.fetchTrainers();
         else throw Error("Failed to create trainer")
     } catch(error) {
@@ -46,6 +46,6 @@ const TrainerForm = function(props: {fetchTrainers: () => void}) {
         <br />
         <button type="submit">Add</button>
     </form> );
-}
+});
 
 export default TrainerForm;

@@ -11,6 +11,12 @@
       "name": "cameron",
       "age": 32,
       "specialism": "node"
+    },
+    {
+      "id": "cc3f",
+      "name": "Piers",
+      "age": 26,
+      "specialism": "DevOps"
     }
   ]
 }
