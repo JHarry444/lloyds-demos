@@ -1,0 +1,16 @@
+{
+  "trainers": [
+    {
+      "id": "dfsdf",
+      "name": "Jordan",
+      "age": 30,
+      "specialism": "Java"
+    },
+    {
+      "id": "b7c2",
+      "name": "cameron",
+      "age": 32,
+      "specialism": "node"
+    }
+  ]
+}
