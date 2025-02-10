@@ -21,7 +21,7 @@ const TrainerForm = function(props: {fetchTrainers: () => void}) {
             method: 'POST',
             body: data,
             headers: {
-                contentType: 'application/json'
+                "Content-Type": 'application/json'
             }
         });
 
