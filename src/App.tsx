@@ -1,11 +1,11 @@
 import './App.css'
-import TrainerContainer from './components/callback_and_memo/TrainerContainer'
+import Counter from './components/callback_and_memo/Counter'
 
 function App() {
 
   return (
     <>
-      <TrainerContainer/>
+      <Counter />
     </>
   )
 }
